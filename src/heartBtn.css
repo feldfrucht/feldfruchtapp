@@ -1,0 +1,11 @@
+/* Heart Button styling */
+.heartBtn{
+  border: none;
+  background: none;
+  padding-right: 0.3rem;
+  font-size: 1.5rem;
+  color: var(--DarkGreen);
+}
+.heartBtn--activated{
+  color: var(--DarkBlue);
+}

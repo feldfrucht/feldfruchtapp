@@ -1,0 +1,140 @@
+
+/* --------------- Farmer-Profile ---------------- */
+.farmerProfile-grid{
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+}
+.farmerHero {
+  place-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+.farmerHero-banner{
+  width: 100%;
+  height: 11rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.farmerName{
+  background: var(--LightGreen);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.farmerName-center{
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.farmerName-center p{
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.farmerAbout{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+.farmerImages-grid{
+  list-style-type: none;
+  width: 94vw;
+  max-width: 600px;
+  height: 95vw;
+  max-height: 600px;
+  place-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 0.5vw;
+  column-gap: 0.5vw;
+}
+.farmerProfile-impressionImage{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.productsFarmer-scrollable{
+  background: none;
+  max-width: calc(var(--numberProducts)*12.4rem + (2 + var(--numberProducts) - 1)*2rem + 0.0625rem);
+  grid-template-columns: repeat(var(--numberProducts), 12.4rem) 1px;
+  margin-bottom: -60px; /* maximum width of scrollbar */
+  padding-bottom: 60px; /* maximum width of scrollbar */
+}
+.productsFarmer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--LightGreen);
+  height: 18rem;  
+  justify-content: center;
+}
+.productFarmer-heartBtn{
+  position: absolute;
+  z-index: 1;
+  left: 10.2rem;
+  top: 10.2rem;
+}
+.productFarmer-tag{
+  top: 10.4rem;
+}
+.farmerMap-container{
+  display: flex;
+  justify-content: center;
+}
+.farmerMap-map{
+  background: var(--LightBlue);
+  height: 14rem;
+  width: 94vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  margin-top: 0.9rem;
+}
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.team-scrollable{
+  margin-top: 0.9rem;
+  column-gap: 2rem;
+  max-width: calc(3*12.4rem + (2 + 3 - 1)*2rem + 0.0625rem);
+  grid-template-columns: repeat(3, 12.4rem) 1px;
+  margin-bottom: -50px; /* maximum width of scrollbar */
+  padding-bottom: 50px; /* maximum width of scrollbar */
+}
+.teamMember{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.teamMember-imgContainer{
+  border-radius: 100%;
+  background: var(--LightBlue);
+  margin-bottom: 0.9rem;
+  width: 11rem;
+  height: 11rem;
+}
+.farmerFooter{
+  background: var(--LightGreen);
+  padding: 1rem 0;
+  font-weight: bold;
+}
+.farmerFooter-center{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+.farmerFooter-socialIcon{
+  font-size: 2rem;
+  padding-right: 0.5rem;
+}
+/* --------------- End of Farmer-Profile ---------------- */

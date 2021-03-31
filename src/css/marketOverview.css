@@ -1,0 +1,182 @@
+.marketOverview-visibleFilters{
+    width: 100%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: auto 5rem;
+    column-gap: 0.5rem;
+    align-items: center;
+    justify-content: space-around;
+}
+.marketOverview-gridContainer{
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+/* --------------- Market Cart ---------------- */
+.marketOverview-cart{
+    background: var(--LightGreen);
+    border-radius: var(--imgRoundCorner);
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 0.6rem;
+    justify-content: flex-start;
+    max-width: 400px;
+}
+.marketOverview-cartColumnOne{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.marketOverview-imgContainer{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50vw;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: var(--imgRoundCorner);
+    display: table-cell;
+    vertical-align: middle;
+}
+.marketOverview-name{
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--DarkBlue);
+    width: 50vw;
+    height: 10vw;
+    padding: 0.5rem;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.marketOverview-location{
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.marketOverview-time{
+    display: flex;
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0.5rem;
+    margin-top: 0;
+    justify-content: center;
+    min-width: 120px;
+    width: 23vw;
+}
+.marketOverview-timeDay{
+    border-radius: 100%;
+    color: var(--LightBlue);
+    font-weight: bold;
+    font-size: 1rem;
+    background: var(--DarkGreen);
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    margin-right: 0.2rem;
+}
+/* --------------- End of Market Cart ---------------- */
+
+/* --------------- Market Overwiew Map ---------------- */
+.marketOverviewMap-body{
+    background: var(--LightBlue);
+    height: 6rem;
+}
+.marketOverviewMap-filters{
+    width: 100%;
+    background: rgba(255, 255, 255);
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: var(--imgRoundCorner) var(--imgRoundCorner) 0 0 ;
+    position: absolute;
+    top: 5.3rem;
+}
+.marketOverviewMap-initiallyVisible{
+    width: 100%;
+}
+.marketOverviewMap-visibleFilters{
+    width: 100%;
+    max-width: 1170px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.marketOverviewMap-moreFiltersAndClose{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 0.2rem;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+.marketOverviewMap-filtersCollapse{
+    justify-self: right;
+    margin-bottom: 1rem;
+}
+.marketOverview-mapContainer,
+.marketInfoCart-backgr{
+    border-radius: var(--imgRoundCorner) var(--imgRoundCorner) 0 0 ;
+    width: 100%;
+    height: calc(100vh - 5.3rem);
+    position: absolute;
+    top: 5.3rem;
+    overflow: hidden;
+}
+.marketInfoCart-backgr{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    display: flex;
+    z-index: 2;
+}
+.marketInfoCart-cart{
+    width: 90vw;
+    border-radius: var(--imgRoundCorner);
+    overflow: hidden;
+    background: var(--mainWhite);
+    align-self: center;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 6rem auto auto auto;
+}
+.marketInfoCart-cartImgContainer{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.marketInfoCart-title{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    background: var(--LightGreen);
+}
+.marketInfoCart-about{
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+.marketInfoCart-timesContent{
+    list-style: none;
+}
+.marketInfoCart-visitBtn{
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background-color: var(--LightBlue);
+    font-weight: bold;
+    color: var(--LightGreen);
+    border-radius: var(--imgRoundCorner);
+    padding: 0.5rem 2rem;
+}
+.mapboxgl-marker {
+    font-size: 1.5rem;
+    height: 1.5rem;
+    width: 1rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+
+/* --------------- End of Market Overwiew Map ---------------- */

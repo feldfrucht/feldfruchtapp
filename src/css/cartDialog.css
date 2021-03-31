@@ -1,0 +1,95 @@
+.cart-center{
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------------- Products ---------------- */
+.cartDialog-productList{
+    list-style-type: none;
+    min-height: 64vh;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 900px;
+}
+.cartDialog-product{
+    display: grid;
+    grid-template-columns: 30vw auto 15vw;
+    column-gap: 0.2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+    justify-items: center;
+}
+.cartDialog-productImageContainer{
+    width: 30vw;
+    height: 30vw;
+    border-radius: var(--imgRoundCorner);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cartDialog-productInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-self: flex-start;
+}
+.cartDialog-productName{
+    font-size: 1rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.cartDialog-productLocation{
+    font-size: 0.8rem;
+}
+.cartDialog-productPrice{
+    color: var(--LightBlue);
+    font-weight: bold;
+}
+.cartDialog-productAmount{
+    color: var(--DarkGreen);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.cartDialog-productAmountBtn{
+    cursor: pointer;
+}
+.cartDialog-productAmount p{
+    color: var(--LightBlue);
+}
+.cart-totalAmount{
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.cart-totalAmountNumber{
+    color: var(--LightBlue);
+}
+/* --------------- End of Products ---------------- */
+
+/* --------------- Bottom ---------------- */
+.cartDialog-bottom{
+    background: var(--LightGreen);
+    min-height: 6rem;
+    height: 10vh;
+    border-radius: var(--imgRoundCorner) var(--imgRoundCorner) 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cartDialog-checkOutBtn{
+    margin: 0 auto;
+}
+.cartDialog-arrowBack{
+    width: 100%;
+    max-width: 1170px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10vw;
+}
+.cartDialog-arrowBackText{
+    margin-right: 1rem;
+    font-weight: bold;
+}
+/* --------------- End of Bottom ---------------- */

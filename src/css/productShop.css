@@ -1,0 +1,81 @@
+
+/* --------------- Product Grid ---------------- */
+.productShop-gridContainer{
+    display: flex;
+}
+.productShop-productsGrid{
+    width: 92vw;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 0.5rem;
+    justify-items: center;
+}
+/* --------------- End of Product Grid ---------------- */
+/* --------------- Single Product ---------------- */
+.productShop-productCart{
+    width: 28vw;
+    height: 35vw;
+    border: 0.1rem solid var(--LightGreen);
+    background: var(--LightGreen);
+    border-radius: var(--imgRoundCorner);
+    position: relative;
+}
+.productShop-productCart--notAvailable{
+    border: 0.1rem solid var(--DarkRed);
+    background: var(--LightRed);
+}
+.productShop-productImgContainer{
+    width: 24vw;
+    height: 24vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: var(--imgRoundCorner);
+    position: absolute;
+    margin: auto;
+    margin-top: 2vw;
+    left: 0;
+    right: 0;
+}
+.productShop-price{
+    font-size: 4vw;
+    position: absolute;
+    bottom: 2vw;
+    left: 3vw;
+}
+/* --------------- End of Single Product ---------------- */
+/* --------------- Filters ---------------- */
+.productShop-visibleFilters{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 90%;
+    align-content: space-around;
+}
+.productShop-filterImgContainer{
+    width: 20vw;
+    height: 20vw;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .productShop-filterImgContainer--activated{
+    border: 2px solid var(--LightGreen);
+  }
+.productShop-filter{
+    text-align: center;
+    color: var(--LightGreen);
+  }
+  .productShop-filterImgContainer{
+    margin: 0 auto;
+    margin-bottom: 0.2rem;
+  }
+.productShop-inVisibleFilters{
+    grid-template-rows: auto auto auto auto auto auto auto;
+    margin-bottom: 2rem;
+  }
+  /* --------------- End of Filters ---------------- */

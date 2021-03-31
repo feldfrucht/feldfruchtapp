@@ -1,0 +1,918 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+  --mainWhite: #FFFFFF;
+  --mainBlack: #000000;
+  --DarkBlue: hsl(192, 45%, 23%);
+  --LightBlue: rgb(80, 133, 139);
+  --DarkGreen: hsl(120, 23%, 79%);
+  --LightGreen: rgb(232, 242, 233);
+  --LightRed: #F2E8E8;
+  --DarkRed: #C67F7F;
+  --mainSpacing: 0.1rem;
+  --mainRoundCorner: 2rem;
+  --imgRoundCorner: 1rem;
+  --mainTransition: all 0.3s linear;
+  --numberFarmers: 0;
+  --numberProducts: 0;
+}
+@import url('normalize.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*element wont get bigger when padding*/
+}
+/* @font-face {
+  font-family: dejaVu;
+  src: url(../fonts/DejaVuSans.woff);
+} */
+*:focus {
+  outline: none;
+}
+body {
+  color: var(--DarkBlue);
+  background: var(--mainWhite);
+  /* font-family: "Segoe UI";  */
+  font-size: 100%;
+  width: 100%;
+}
+a{
+  text-decoration: none;
+  color: var(--DarkBlue);
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--DarkBlue);
+  opacity: 0.85; /* Firefox */
+}
+
+/* hide sth */
+.hide{
+  display: none;
+}
+.section-title{
+  font-size: 1.25rem;
+  /* font-family: "Segoe UI"; */
+  font-weight: bold;
+  text-align: center;
+}
+.grid,
+.marketProfile-grid,
+.farmerProfile-grid{
+  row-gap: 1.2rem;
+}
+.farmers,
+.products,
+.productsFarmer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.productsFarmer-container{
+  overflow: hidden; 
+}
+.products,
+.productsFarmer-container {
+  justify-content: center;
+  position: relative;
+}
+.farmers-scrollable,
+.products-scrollable,
+.productsFarmer-scrollable,
+.team-scrollable {
+  padding: 0 2rem;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-column-gap: 2rem;
+  grid-auto-flow: column;
+  justify-content: start;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.farmer,
+.product{
+  justify-self: center;
+}
+/* --------------- Image Container ---------------- */
+.farmerOverview-imgContainer,
+.farmer-imgContainer,
+.product-imgContainer,
+.productFarmer-imgContainer,
+.teamMember-imgContainer{
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  cursor: pointer;
+  z-index: 1;
+}
+.farmerOverview-imgContainer,
+.farmer-imgContainer{
+  border-radius: var(--imgRoundCorner);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.product-imgContainer,
+.productFarmer-imgContainer{
+  border-radius: var(--imgRoundCorner);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 12.4rem;
+  height: 12.4rem;
+}
+/* --------------- End of Image Container ---------------- */
+/* --------------- Market Text Elements ---------------- */
+.marketAbout-addressTitle,
+.marketInfoCart-addressTitle,
+.marketInfoCart-timesTitle,
+.marketAbout-timesTitle{
+    font-size: 1rem;
+    align-self: start;
+    margin: 0;
+}
+/* --------------- End of Market Text Elements ---------------- */
+/* --------------- Farmer and Product Carts ---------------- */
+.marketOverview-cart,
+.farmerOverview-cart,
+.farmer-cart {
+  background: var(--LightBlue);
+  padding-top: 0.6rem;
+  border-radius: var(--imgRoundCorner);
+}
+.marketOverview-cart,
+.farmerOverview-cart{
+  margin: 1rem auto;
+  width: 90vw;
+}
+.farmerOverview-cart{
+  position: relative;
+  height: 80vw;
+}
+.product-cart,
+.productFarmer-cart{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+/* --------------- End of Carts ---------------- */
+.product-tag,
+.productFarmer-tag{
+  height: 2rem;
+  min-width: 5rem;
+  background: var(--LightBlue);
+  color: var(--LightGreen);
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 2rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  font-weight: normal;
+  position: absolute;
+  z-index: 1;
+  border-radius: 0 var(--imgRoundCorner) 0 var(--imgRoundCorner);
+}
+.farmerOverview-descript,
+.farmer-descript{
+  padding-top: 3.2rem;
+  background: var(--LightGreen);
+  border-radius: var(--imgRoundCorner);
+  font-size: 0.8rem;
+}
+/* --------------- Overview/Shop Grid Container ---------------- */
+.marketOverview-gridContainer,
+.farmerOverview-gridContainer,
+.productShop-gridContainer{
+    border-radius: var(--imgRoundCorner) var(--imgRoundCorner) 0 0;
+    background: var(--mainWhite);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    position: relative;
+}
+/* --------------- End of Grid Container ---------------- */
+
+/* ###########  Form Styling  ######### */
+
+/* Overlay styling */
+.impressum-overlayContact,
+.impressum-overlayLogIn,
+.navbar-overlaySideBar{
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+  border: none;
+}
+.impressum-overlayContact,
+.impressum-overlayLogIn{
+  z-index: 2; /* Sit on top */
+}
+/* Modal Content Box */
+.impressum-overlayContactContent,
+.impressum-overlayLogInContent {
+  background-color: var(--mainWhite);
+  margin: 10vh auto; /* 15% from the top and centered */
+  padding: 20px 30px;
+  border: none;
+  border-radius: var(--imgRoundCorner);
+  width: 90vw; /* Could be more or less, depending on screen size */
+  max-width: 500px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.impressum-overlayContactTitle,
+.impressum-overlayLogInTitle{
+  align-self: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--DarkBlue);
+}
+.impressum-contactForm,
+.impressum-logInForm{
+  padding-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.impressum-contactForm input[type="text"],
+.impressum-contactForm input[type="email"],
+.impressum-logInForm input[type="email"],
+.impressum-logInForm input[type="password"],
+.impressum-contactForm textarea{ 
+  width: 100%;
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem; 
+  padding: 0.5rem;
+  border: 1px solid var(--LightBlue);
+}
+.impressum-contactForm input[type="text"]::placeholder,
+.impressum-contactForm input[type="email"]::placeholder,
+.impressum-logInForm input[type="email"]::placeholder,
+.impressum-logInForm input[type="password"]::placeholder,
+.impressum-contactForm textarea::placeholder{
+  color: var(--LightBlue);
+  opacity: 1;
+  font-family: "Segoe UI";
+}
+.impressum-logInFormRegister,
+.impressum-logInFormRegisterFarmer{
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--DarkBlue);
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+}
+
+/* The Submit and RegisterButton */
+.impressum-contactForm button[type="submit"],
+.impressum-logInForm button[type="submit"],
+.impressum-registerBtn{
+  font-size: 0.8rem; 
+  padding: 0.5rem 0.5rem;
+  width: 9rem;
+  font-family: "Segoe UI";
+  color: var(--LightGreen);
+  border: none;
+  background: var(--LightBlue);
+  border-radius: 5px;
+  align-self: center;
+}
+
+/* The Arrow-Back Button */
+.farmerHero-arrowIcon,
+.productHero-arrowIcon{
+  margin: 1rem auto;
+  padding-left: 5vw;
+  width: 100%;
+  max-width: 1170px;
+  color: var(--DarkBlue);
+  font-size: 1rem;
+}
+
+/* The Close Button */
+.impressum-overlayClose,
+.marketOverviewMap-filtersCollapse{
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: rgba(80, 133, 139,0.7);
+    /* background: black; */
+  border-radius: 100%;
+  color: var(--LightGreen);
+  font-size: 1.5rem;
+}
+.impressum-overlayClose:hover,
+.impressum-overlayClose:focus,
+.marketOverviewMap-filtersCollapse:hover,
+.marketOverviewMap-filtersCollapse:focus{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The List Markets Button */
+.listMarketsBtn{
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: rgba(80, 133, 139,0.7);
+  border-radius: 100%;
+  color: var(--mainWhite);
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.listMarketsBtn:hover,
+.listMarketsBtn:focus{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Round Map Open Button */
+.roundMap{
+  display: flex;
+  text-align: center;
+  border-radius: 100%;
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.roundMap p{
+  margin: auto 0;
+}
+
+/* Heart Button styling 
+.farmer-heartBtn,
+.product-heartBtn,
+.farmerName-heartBtn,
+.productFarmer-heartBtn,
+.productName-heartBtn{
+  border: none;
+  background: none;
+  padding-right: 0.3rem;
+  font-size: 1.5rem;
+  color: var(--DarkGreen);
+}*/
+
+/* Clickable Button styling */
+.viewAllBtn,
+.productsFarmer-viewProducts,
+.productAbout-buyBtn,
+.productAbout-saveBtn,
+.cartDialog-checkOutBtn{
+  border: none;
+  color: var(--LightGreen);
+  font-weight: bold;
+  background: var(--LightBlue);
+  border-radius: var(--mainRoundCorner);
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+}
+.moreFiltersBtn{
+  background: var(--DarkBlue);
+  color: var(--LightGreen);
+  padding: 0.5rem 2.6rem;
+  border-radius: var(--imgRoundCorner);
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.filters-weekdayLight,
+.filters-weekdayDark{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  line-height: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.filters-weekdayLight{
+  background: var(--LightGreen);
+  color: var(--LightBlue);
+}
+.filters-weekdayDark{
+  background: var(--DarkBlue);
+  color: var(--LightGreen);
+}
+.filters-weekdayLight--activated{
+  background: var(--DarkGreen);
+}
+.filters-weekdayDark--activated{
+  background: var(--LightBlue);
+}
+
+/* Toggle Switch styling */
+.toggleSwitch {
+  position: relative;
+  width: 2.2rem;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-align: left;
+}
+.toggleSwitch-checkbox {
+  display: none;
+}
+.webform label,
+.toggleSwitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  width: 2.2rem;
+  border: 1px solid var(--DarkGreen);
+  border-radius: 1.2rem;
+  margin: 0;
+}
+.toggleSwitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.toggleSwitch-inner::before, .toggleSwitch-inner::after {
+  content: "";
+  display: block;
+  float: left;
+  width: 50%;
+  height: 1.1rem;
+  box-sizing: border-box;
+}
+.toggleSwitch-inner::before {
+  background-color: var(--DarkGreen);
+}
+.toggleSwitch-inner::after {
+  background-color: var(--mainWhite);
+}
+.toggleSwitch-switch {
+  display: block;
+  width: 1.4rem;
+  height: 1.3rem;
+  background: var(--mainWhite);;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0.8rem;
+  border: 1px solid var(--DarkGreen);
+  border-radius: 100%;
+  transition: all 0.3s ease-in 0s;
+}
+.toggleSwitch-checkbox:checked + .toggleSwitch-label .toggleSwitch-inner {
+  margin-left: 0;
+}
+.toggleSwitch-checkbox:checked + .toggleSwitch-label .toggleSwitch-switch {
+  right: 0px;
+}
+/* --------------- End of Toggle Switch ---------------- */
+/* --------------- Slider ---------------- */
+.slider-area{
+  justify-self: center;
+}
+.slider-container {
+  position: relative;
+  margin-top: 1rem;
+  height: 2rem;
+}
+.slider {
+  pointer-events: none;
+  margin: 0px;
+  cursor: pointer;
+  padding-left: 30%;
+  padding-right: 30%;
+  background-color: var(--LightGreen);
+  box-sizing: border-box;
+}
+.slider-thumb {
+  cursor: pointer;
+  border: none;
+  background-color: var(--mainWhite);
+  border-radius: 100%;
+  position: absolute;
+}
+.slider-thumbFocused{
+  background-color: var(--DarkGreen);
+}
+.slider-track {
+  pointer-events: none;
+  height: 100%;
+  background-color: var(--DarkBlue);
+}
+.slider-output {
+  pointer-events: none;
+  margin: 0;
+  color: var(--LightGreen);
+  position: absolute;
+  font-size: 14px;
+  text-align: center;
+}
+/* --------------- End of Slider ---------------- */
+/* --------------- SwipeableList ---------------- */
+.swipeableList-list{
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.swipeableList-listItem {
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+}
+
+.swipeableList-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 16px;
+  color: var(--DarkRed);
+  font-weight: bold;
+  background-color: var(--LightRed);
+  box-sizing: border-box;
+}
+
+.swipeableList-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+/* --------------- End of SwipeableList ---------------- */
+/* --------------- Navbar ---------------- */
+
+.navbar,
+.navbarBack {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar{
+  background: var(--mainWhite);
+}
+.navbar-center,
+.productHero-center,
+.navbarBack-heroCenter {
+  width: 100%;
+  max-width: 1170px;
+  display: grid;
+  align-items: center;
+}
+/* --------------- NavbarBack ---------------- */
+.marketOverview-body,
+.marketOverviewMap-body,
+.farmerOverview-body,
+.productShop-body{
+  background: var(--LightBlue);
+}
+.navbarBack-heroCenter{
+  grid-template-columns: 2rem auto 3rem;
+}
+.marketOverview-hero,
+.marketOverview-hero a,
+.farmerOverview-hero,
+.farmerOverview-hero a,
+.productShop-hero,
+.productShop-hero a{
+  color: var(--LightGreen);
+}
+.navbarBack-heroRight .cartItems{
+  background: var(--DarkBlue);
+  color: var(--LightGreen);
+}
+.navbarBack-heroArrowIcon{
+  justify-self: end;
+  margin-right: 15px;
+}
+/* --------------- End of NavbarBack ---------------- */
+.cart{
+  display: grid;
+  margin-right: 5px;
+  height: 30px;
+}
+.cartIcon{
+  font-size: 1.3rem;
+  cursor: pointer;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+}
+.cartItems{
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+  align-self: flex-start;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--LightBlue);
+  background: var(--LightGreen);
+  border-radius: 100%;
+  font-weight: bold;
+}
+/* --------------- End of Navbar ---------------- */
+/* --------------- Searchbox ---------------- */
+.searchbar-searchAndDrop{
+  width: 100%;
+  justify-content: center;
+}
+.searchbar-container,
+.searchbarMain-container{
+  justify-self: end;
+  width: 65vw;
+  min-width: 150px;
+  height: 1.8em;
+  background: var(--LightGreen);
+  border-radius: var(--mainRoundCorner);
+  display: flex;
+}
+.searchbar-container{
+  margin: 0 auto;
+}
+.searchbar-container input[type="search"],
+.searchbarMain-container input[type="search"]{
+  background: var(--LightGreen);
+  border-radius: var(--mainRoundCorner);
+  border: none;
+  width: -webkit-calc(100% - 36px);
+  width:    -moz-calc(100% - 36px);
+  width:         calc(100% - 36px);
+  text-align: right;
+  font-size: 0.8rem;
+  margin-right: 10px;
+}
+.searchbar-icon,
+.searchbarMain-icon{
+  height: 16px;
+  width: 16px;
+  margin: auto 15px auto 0;
+  color: var(--DarkBlue);
+  cursor: pointer;
+}
+/* dropdown menu */
+.searchbar-searchAndDrop{
+  position: relative;
+}
+.searchbar-dropdownContent{
+  width: 100%;
+  background-color: var(--LightGreen);
+  border-radius: 0 0 var(--imgRoundCorner) var(--imgRoundCorner);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+.searchbar-suggestions{
+  background-color: var(--mainWhite);
+  margin: 0.7rem;
+  border-radius: var(--imgRoundCorner);
+}
+.searchbar-iconAndText{
+  border-top: 1.5px solid var(--LightGreen);
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  display: block;
+  color: var(--DarkBlue);
+  padding: 0.35rem 0;
+}
+.searchbar-dropdownTextTop,
+.searchbar-dropdownTextBottom{
+  margin-left: 0.5rem;
+  text-decoration: none;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.searchbar-dropdownTextTop{
+  border-top: 1.5px solid var(--LightGreen);
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  display: block;
+  color: var(--DarkBlue);
+  padding: 0.5rem 0;
+}
+/* end of dropdown menu */
+
+input[type="search"]::-webkit-input-placeholder{
+  color: var(--DarkBlue);
+  opacity: 0.5;
+}
+.standardFilter-input::-webkit-input-placeholder,
+.standardFilter-input::-moz-placeholder,
+.productShop-farmerFilter::-webkit-input-placeholder,
+.productShop-marketFilter::-webkit-input-placeholder,
+.farmerOverview-marketFilter::-webkit-input-placeholder,
+.marketOverview-marketFilter::-webkit-input-placeholder,
+.locationFilter-input::-webkit-input-placeholder,
+.productShop-farmerFilter::-moz-placeholder,
+.productShop-marketFilter::-moz-placeholder,
+.farmerOverview-marketFilter::-moz-placeholder,
+.marketOverview-marketFilter::-moz-placeholder,
+.locationFilter-input::-moz-placeholder {
+  color: var(--DarkBlue);
+  opacity: 1;
+}
+.standardFilter-lightText::-webkit-input-placeholder,
+.standardFilter-lightText::-moz-placeholder,
+.locationFilter-lightText::-webkit-input-placeholder,
+.locationFilter-lightText::-moz-placeholder,
+.marketOverviewMap-marketFilter::-webkit-input-placeholder,
+.marketOverviewMap-marketFilter::-moz-placeholder{
+  color: var(--LightGreen);
+  opacity: 1;
+}
+/* --------------- End of Searchbox ---------------- */
+/* --------------- Filters ---------------- */
+.marketOverview-filters,
+.farmerOverview-filters,
+.productShop-filters{
+  background: var(--LightBlue);
+}
+.marketOverview-visibleFilters,
+.farmerOverview-visibleFilters,
+.productShop-visibleFilters{
+  margin: 1.5rem 0;
+}
+.marketOverview-dragBtn,
+.farmerOverview-dragBtn,
+.productShop-dragBtn{
+  background: var(--LightBlue);
+  width: 3.5rem;
+  height: 0.5rem;
+  border-radius: var(--imgRoundCorner);
+  position: absolute;
+  left: 50%;
+  margin-left: -1.75rem;
+  top: 0.75rem;
+  cursor: pointer;
+}
+.marketOverview-inVisibleFilters,
+.marketOverviewMap-inVisibleFilters,
+.farmerOverview-inVisibleFilters,
+.productShop-inVisibleFilters{
+  width: 100%;
+  max-width: 1170px;
+  color: var(--LightGreen);
+  display: grid;
+  row-gap: 1.5rem;
+}
+.marketOverview-marketFilter,
+.farmerOverview-marketFilter,
+.productShop-farmerFilter,
+.productShop-marketFilter,
+.marketOverviewMap-marketFilter{
+  border: none;
+  border-radius: var(--imgRoundCorner);
+  padding: 0.5rem 1rem;
+  color: var(--DarkBlue);
+  width: 80vw;
+  justify-self: center;
+}
+.marketOverview-marketFilter,
+.farmerOverview-marketFilter,
+.productShop-farmerFilter,
+.productShop-marketFilter,
+.marketOverviewMap-marketFilter{
+  background: var(--LightGreen);
+}
+.marketOverviewMap-marketFilter{
+  background: var(--DarkBlue);
+}
+.standardFilter-wideContainer,
+.locationFilter-wideContainer{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+.standardFilter-container,
+.locationFilter-container{
+  display: flex;
+  max-width: 80vw;
+  height: 2rem;
+  margin: 0 auto;
+}
+.standardFilter-container,
+.standardFilter-input,
+.locationFilter-location,
+.locationFilter-input,
+.locationFilter-radius{
+  border: none;
+  background: var(--LightGreen);
+  color: var(--DarkBlue);
+}
+.standardFilter-container{
+  border-radius: var(--imgRoundCorner);
+  padding: 0.5rem 1rem;
+}
+.locationFilter-location{
+  border-radius: var(--imgRoundCorner) 0  0 var(--imgRoundCorner);
+  width: 70%;
+  padding: 0.5rem 1rem;
+}
+.standardFilter-input,
+.locationFilter-input{
+  width: 100%;
+  height: 100%;
+}
+.locationFilter-radius{
+  border-radius: 0 var(--imgRoundCorner) var(--imgRoundCorner) 0;
+  border-left: 1px solid var(--DarkBlue);
+  font-size: 0.7rem;
+  width: 30%;
+  min-height: 100%;
+  padding-right: 0.2rem;
+  text-align: center;
+  line-height: 0.8rem;
+  padding-top: 0.1rem;
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.locationFilter-dropdownContent {
+  position: absolute;
+  background-color: var(--LightGreen);
+  border-radius: 0 0 var(--imgRoundCorner) var(--imgRoundCorner);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.locationFilter-dropdownContent .locationFilter-dropdownText{
+  color: var(--DarkBlue);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.locationFilter-radius .locationFilter-dropdownContent {
+  display: block;
+}
+
+.locationFilter-dropdownText:hover{
+  color: var(--LightBlue);
+}
+
+.marketOverview-filtersWeekdays,
+.farmerOverview-filtersWeekdays,
+.productShop-filtersWeekdays{
+  width: 100%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 0.2rem;
+  text-align: center;
+  justify-items: center;
+}
+.marketOverview-toggleSwitch,
+.productShop-toggleSwitch{
+  width: 90%;
+  justify-self: center;
+  display: flex;
+  justify-content: space-around;
+}
+.marketOverview-toggleSwitchText,
+.productShop-toggleSwitchText{
+  float: left;
+  margin-right: 0.5rem;
+}
+/* --------------- End of Filters ---------------- */

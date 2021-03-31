@@ -1,0 +1,34 @@
+
+.farmerOverview-visibleFilters{
+    display: flex;
+    justify-content: center;
+}
+.farmerOverview-inVisibleFilters{
+    grid-template-rows: auto auto auto auto auto;
+}
+.farmerOverview-imgContainer{
+    margin-left: 0.6rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    width: 45vw;
+    height: 45vw;
+    position: absolute;
+}
+.farmerOverview-name{
+    color: var(--LightGreen);
+    margin-left: 52vw;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.farmerOverview-descript{
+    position: absolute;
+    bottom: 0;
+    padding: 0.6rem;
+    padding-top: 20vw;
+    width: 90vw;
+    height: 50vw;
+}
+.farmerOverview-descript p{
+    overflow: hidden;
+    height: 27vw;
+}

@@ -1,0 +1,9 @@
+.ol-zoom {
+  top: auto;
+  bottom: 0.5em;
+}
+
+.ol-control button{
+  background-color: var(--LightBlue);
+  opacity: 0.7;
+}
