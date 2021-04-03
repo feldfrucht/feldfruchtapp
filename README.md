@@ -21,3 +21,16 @@ Konsumenten erhalten so vereinfachten Zugang zu regionalen, saisonalen und hochw
 
 Erzeuger von landwirtschaftlichen Produkten profitieren dabei unmittelbar durch die Erleichterung der Direktvermarktung, den direkten Kontakt zum Endverbraucher, mehr Wertschätzung für ihre Arbeit und letztendlich auch höhere Profite, da die Zwischenhändler wegfallen. Außerdem erhalten sie größere Planungssicherheit durch die Vorbestellungen, was in der Konsequenz auch die Lebensmittelverschwendung reduzieren kann.
 
+## Erste Eindrücke
+
+Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen
+
+
+Interaktive Karte, die Verkaufsstellen einer Region abbildet
+
+
+Profil einer Verkaufsstelle
+
+
+Profil eines Erzeugers bzw. Hofs
+
