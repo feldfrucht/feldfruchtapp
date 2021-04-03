@@ -26,6 +26,9 @@ Erzeuger von landwirtschaftlichen Produkten profitieren dabei unmittelbar durch 
 ## Erste Eindrücke
 
 Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen
+<p align="center">
+  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-03%20React%20App(3).png?raw=true" width="200">
+</p>
 
 
 Interaktive Karte, die Verkaufsstellen einer Region abbildet
