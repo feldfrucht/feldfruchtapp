@@ -1,4 +1,4 @@
-## Feldfrucht
+# Feldfrucht
 
 In diesem Repository findet sich der Prototyp für das Frontend zur Webapp Feldfrucht. Diese soll Erzeugern von Lebensmitteln, insbesondere Landwirten, die Möglichkeit bieten, ihre Produkte direkt an den Verbraucher zu vermarkten. Für Konsumenten gibt die App einen umfänglichen Überblick über die Möglichkeiten frische, regionale und nachhaltig produzierte Lebensmittel direkt vom Erzeuger zu kaufen.
 
@@ -8,7 +8,7 @@ Nach dem Clonen des Repositories kann das Frontend mit
 
 gestartet werden und läuft dann auf [http://localhost:3000](http://localhost:3000).
 
-## Die Idee hinter Feldfrucht
+## Vision
 
 Gesellschaftlich ist eine starke Sehnsucht nach tieferen Verbindungen zur Natur und auch zu den Mitmenschen spürbar. Der Klimawandel ruft uns immer drängender ins Bewusstsein, wie wichtig es ist nachhaltig zu wirtschaften und verantwortungsvoll mit den Ressourcen unseres Planeten umzugehen. In kaum einem Bereich sind diese Themen so deutlich sichtbar wie in der Landwirtschaft und Nahrungsmittelproduktion. 
 Ein wichtiger Ansatzpunkt zur Lösung dieser Problematik ist die Verbraucher zu befähigen, informierte Kaufentscheidungen zu treffen. Dafür ist es notwendig Transparenz bezüglich der Produktionsbedingungen der Produkte zu schaffen. Idealerweise kann der Kunde direkt den Erzeuger, den Landwirt oder Gemüsegärtner kennenlernen und aus erster Hand erfahren, wie dieser arbeitet. 
