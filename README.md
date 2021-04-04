@@ -27,22 +27,13 @@ Erzeuger von landwirtschaftlichen Produkten profitieren dabei unmittelbar durch 
 
 Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen
 <p align="center">
-  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-03%20React%20App(3).png?raw=true" width="400">
+  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App.png?raw=true" width="400">
+  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(1).png?raw=true" width="400">
+  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(2).png?raw=true" width="400">
+  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(3).png?raw=true" width="400">
 </p>
 
 Interaktive Karte, die Verkaufsstellen einer Region abbildet
-<p align="center">
-  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-03%20React%20App(4).png?raw=true" width="400">
-</p>
-
 Profil einer Verkaufsstelle
-<p align="center">
-  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-03%20React%20App(2).png?raw=true" width="400">
-</p>
-
-
 Profil eines Erzeugers bzw. Hofs
-<p align="center">
-  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-03%20React%20App(6).png?raw=true" width="400">
-</p>
 
