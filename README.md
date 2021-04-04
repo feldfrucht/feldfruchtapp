@@ -24,14 +24,15 @@ Konsumenten erhalten so vereinfachten Zugang zu regionalen, saisonalen und hochw
 Erzeuger von landwirtschaftlichen Produkten profitieren dabei unmittelbar durch die Erleichterung der Direktvermarktung, den direkten Kontakt zum Endverbraucher, mehr Wertschätzung für ihre Arbeit und letztendlich auch höhere Profite, da die Zwischenhändler wegfallen. Außerdem erhalten sie größere Planungssicherheit durch die Vorbestellungen, was in der Konsequenz auch die Lebensmittelverschwendung reduzieren kann.
 
 ## Erste Eindrücke
-
-Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen
-<p align="center" margin="10px" display="flex">
-  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App.png?raw=true" width="200" vertical-align="top">
+<div align="center" margin="10px">
+  <div>
+    <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App.png?raw=true" width="200" vertical-align="top">
+    <p>Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen</p>
+  </div>
   <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(1).png?raw=true" width="200" vertical-align="top">
   <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(2).png?raw=true" width="200" vertical-align="top">
   <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(3).png?raw=true" width="200" vertical-align="top">
-</p>
+</div>
 
 Interaktive Karte, die Verkaufsstellen einer Region abbildet
 Profil einer Verkaufsstelle
