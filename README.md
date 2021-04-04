@@ -33,9 +33,11 @@ Erzeuger von landwirtschaftlichen Produkten profitieren dabei unmittelbar durch 
 
 <table>
   <tr>
-    <td vertical-align="top"><img alt="Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen" src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App.png?raw=true" width="200" >
+    <td vertical-align="middle">
+      <img alt="Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen" src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App.png?raw=true" width="200" >
       <img alt="Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen" src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(1).png?raw=true" width="200" >
        <img alt="Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen" src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(2).png?raw=true" width="200" >
-      <img alt="Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen" src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(3).png?raw=true" width="200" ></td>
+      <img alt="Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen" src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(3).png?raw=true" width="200" >
+    </td>
   </tr>
 </table>
