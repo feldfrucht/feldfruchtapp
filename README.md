@@ -25,14 +25,8 @@ Erzeuger von landwirtschaftlichen Produkten profitieren dabei unmittelbar durch 
 
 ## Erste Eindrücke
 <div align-items="center" margin="10px" display="flex" justify-content="center" height="100%">
-  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App.png?raw=true" width="200" >
-  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(1).png?raw=true" width="200" >
-  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(2).png?raw=true" width="200">
-  <img src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(3).png?raw=true" width="200">
+  <img alt="Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen" src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App.png?raw=true" width="200" >
+  <img alt="Interaktive Karte, die Verkaufsstellen einer Region abbildet" src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(1).png?raw=true" width="200" >
+  <img alt="Profil einer Verkaufsstelle" src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(2).png?raw=true" width="200">
+  <img alt="Profil eines Erzeugers bzw. Hofs" src="https://github.com/feldfrucht/feldfruchtapp/blob/main/Screenshot_2021-04-04%20React%20App(3).png?raw=true" width="200">
 </div>
-
-<p width="200" >Startseite mit Hintergrundinfos, Erzeuger-, Markt- und Produktempfehlungen</p>
-Interaktive Karte, die Verkaufsstellen einer Region abbildet
-Profil einer Verkaufsstelle
-Profil eines Erzeugers bzw. Hofs
-
