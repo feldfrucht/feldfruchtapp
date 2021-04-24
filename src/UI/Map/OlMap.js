@@ -16,7 +16,7 @@ import {fromLonLat} from 'ol/proj';
 import {click} from 'ol/events/condition';
 import Select from 'ol/interaction/Select';
 
-import 'fontawesome-free-5.12.1-web/css/all.css';
+//import 'fontawesome-free-5.12.1-web/css/all.css';
 
 
 const OlMap = ({markets, mapContainer, showMarketInfo , setShowMarketInfo, setMarketInfo, marketInfo, setHideFilter}) => {
