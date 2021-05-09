@@ -1,7 +1,7 @@
 import React from 'react';
 import WeekdayBtn from '../Filters/WeekdayBtn';
 import SearchBar from '../Search/SearchBar';
-import LocationFilter from '../Filters/LocationFilter';
+import StandardFilter from '../Filters/StandardFilter';
 import MoreFiltersBtn from '../Buttons/MoreFiltersBtn';
 import RoundMap from '../Buttons/RoundMap';
 
@@ -12,11 +12,12 @@ const Filters = ({filterVisible, setFilterVisible}) => {
         <section className="marketOverview-filters">
             <SearchBar text="Märkte suchen"/>
             <div className="marketOverview-visibleFilters">
-                < LocationFilter width="60vw"/>
+                < StandardFilter width="60vw" color="var(--DarkBlue)" background="var(--LightGreen)" type="location" placeholderText="Alle Orte"/>
                 < RoundMap text="Auf Karte anzeigen" image={require('../../css/images/map.PNG')} link="/marketOverviewMap" />
             </div>
             <div className={(filterVisible)?"marketOverview-inVisibleFilters":"hide"}>
-                <input className="marketOverview-marketFilter" type="text" placeholder="Alle Erzeuger"></input>
+                {/* <input className="marketOverview-marketFilter" type="text" placeholder="Alle Erzeuger"></input> */}
+                < StandardFilter width="80vw" color="var(--DarkBlue)" background="var(--LightGreen)" placeholderText="Alle Erzeuger"/>
 
                 <div className="marketOverview-filtersWeekdays">
                     <WeekdayBtn dayLetter="M" />

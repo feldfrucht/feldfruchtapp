@@ -4,7 +4,6 @@ import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import WeekdayBtn from '../Filters/WeekdayBtn';
-import LocationFilter from '../Filters/LocationFilter';
 import MoreFiltersBtn from '../Buttons/MoreFiltersBtn';
 import DialogClose from '../Buttons/DialogClose';
 import StandardFilter from '../Filters/StandardFilter';
@@ -16,10 +15,10 @@ const FiltersMap = ({hideAll, setHideAll, filterVisible, setFilterVisible}) => {
         <section className="marketOverviewMap-filters">
             <div className={(hideAll)?"hide":"marketOverviewMap-initiallyVisible"}>
                 <div className="marketOverviewMap-visibleFilters">
-                    < LocationFilter background="var(--DarkBlue)" color="var(--LightGreen)" />
+                    < StandardFilter width="80vw" background="var(--DarkBlue)" color="var(--LightGreen)" type="location" placeholderText="Alle Orte"/>
                 </div>
                 <div className={(filterVisible)?"marketOverviewMap-inVisibleFilters":"hide"}>
-                    < StandardFilter placeholderText="Alle Erzeuger"  background="var(--DarkBlue)" color="var(--LightGreen)"/>
+                    < StandardFilter placeholderText="Alle Erzeuger"  background="var(--DarkBlue)" color="var(--LightGreen)" width="80vw"/>
                     
                     <div className="marketOverview-filtersWeekdays">
                         <WeekdayBtn dayLetter="M" theme="dark" />

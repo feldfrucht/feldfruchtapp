@@ -431,70 +431,6 @@ input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   background: var(--LightBlue);
 }
 
-/* Toggle Switch styling */
-.toggleSwitch {
-  position: relative;
-  width: 2.2rem;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  text-align: left;
-}
-.toggleSwitch-checkbox {
-  display: none;
-}
-.webform label,
-.toggleSwitch-label {
-  display: block;
-  overflow: hidden;
-  cursor: pointer;
-  width: 2.2rem;
-  border: 1px solid var(--DarkGreen);
-  border-radius: 1.2rem;
-  margin: 0;
-}
-.toggleSwitch-inner {
-  display: block;
-  width: 200%;
-  margin-left: -100%;
-  transition: margin 0.3s ease-in 0s;
-}
-.toggleSwitch-inner::before, .toggleSwitch-inner::after {
-  content: "";
-  display: block;
-  float: left;
-  width: 50%;
-  height: 1.1rem;
-  box-sizing: border-box;
-}
-.toggleSwitch-inner::before {
-  background-color: var(--DarkGreen);
-}
-.toggleSwitch-inner::after {
-  background-color: var(--mainWhite);
-}
-.toggleSwitch-switch {
-  display: block;
-  width: 1.4rem;
-  height: 1.3rem;
-  background: var(--mainWhite);;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0.8rem;
-  border: 1px solid var(--DarkGreen);
-  border-radius: 100%;
-  transition: all 0.3s ease-in 0s;
-}
-.toggleSwitch-checkbox:checked + .toggleSwitch-label .toggleSwitch-inner {
-  margin-left: 0;
-}
-.toggleSwitch-checkbox:checked + .toggleSwitch-label .toggleSwitch-switch {
-  right: 0px;
-}
-/* --------------- End of Toggle Switch ---------------- */
 /* --------------- Slider ---------------- */
 .slider-area{
   justify-self: center;
@@ -651,7 +587,7 @@ input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   font-weight: bold;
 }
 /* --------------- End of Navbar ---------------- */
-/* --------------- Searchbox ---------------- */
+/* --------------- Searchbox ---------------- 
 .searchbar-searchAndDrop{
   width: 100%;
   justify-content: center;
@@ -688,12 +624,12 @@ input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   margin: auto 15px auto 0;
   color: var(--DarkBlue);
   cursor: pointer;
-}
-/* dropdown menu */
+}*/
+/* dropdown menu 
 .searchbar-searchAndDrop{
   position: relative;
-}
-.searchbar-dropdownContent{
+}*/
+/* .searchbar-dropdownContent{
   width: 100%;
   background-color: var(--LightGreen);
   border-radius: 0 0 var(--imgRoundCorner) var(--imgRoundCorner);
@@ -730,7 +666,7 @@ input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   display: block;
   color: var(--DarkBlue);
   padding: 0.5rem 0;
-}
+} */
 /* end of dropdown menu */
 
 input[type="search"]::-webkit-input-placeholder{
@@ -824,6 +760,11 @@ input[type="search"]::-webkit-input-placeholder{
   width: 100%;
   margin: 0 auto;
 }
+.locationFilter-divider{
+  color: var(--LightGreen) !important;
+  height: 28px;
+  margin: 4px;
+}
 .standardFilter-container,
 .locationFilter-container{
   display: flex;
@@ -905,10 +846,11 @@ input[type="search"]::-webkit-input-placeholder{
 }
 .marketOverview-toggleSwitch,
 .productShop-toggleSwitch{
-  width: 90%;
+  width: 80vw;
   justify-self: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 .marketOverview-toggleSwitchText,
 .productShop-toggleSwitchText{

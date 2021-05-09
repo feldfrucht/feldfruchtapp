@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 
 //import axios from 'axios';
 
@@ -29,6 +31,29 @@ const App = () => {
   //   });
 
   //localStorage.clear()
+
+  const theme = createMuiTheme({
+    palette: {
+      primary: { //blue
+        light: 'rgb(80, 133, 139)',
+        main: 'rgb(80, 133, 139)',
+        dark: 'hsl(192, 45%, 23%)',
+        //contrastText: 'hsl(192, 45%, 23%)',
+      },
+      secondary: { //green
+        light: 'rgb(232, 242, 233)',
+        main: 'rgb(232, 242, 233)',
+        dark: 'hsl(120, 23%, 79%)',
+        //contrastText: 'rgb(232, 242, 233)',
+      },
+      error: {
+        light: "#F2E8E8",
+        main: "#C67F7F",
+        dark: "#C67F7F",
+        //contrastText: "#C67F7F",
+      },
+    },
+  });
 
   const [cartProducts, setCartProducts] = useStateWithLocalStorage('myStorage', {});
 
@@ -114,18 +139,20 @@ const App = () => {
   
 
   return (
-    <Switch>
-      <Route exact path="/" render={(props) => <MainPage {...props} farmers={farmers} products={products} numberItems={Object.keys(cartProducts).length} />} />
-      <Route path="/farmerId" render={(props) => <FarmerProfile {...props} farmer={farmers[0]} products={products} />} />
-      <Route path="/marketId" render={(props) => <MarketProfile {...props} market={markets[0]} farmers={farmers} products={products} />} />
-      <Route path="/cartDialog" render={(props) => <CartDialog {...props} products={cartProducts} numberItems={Object.keys(cartProducts).length} setCartProducts={setCartProducts} />} />
-      {/* here we have to fetch a product from the api based on its id (props.match.params.productId) */}
-      <Route path="/productInfo/:productId" render={(props) => <ProductInfo {...props} product={products[props.match.params.productId-1]} numberItems={Object.keys(cartProducts).length} setCartProducts={setCartProducts} />} />
-      <Route path="/productShop" render={(props) => <ProductShop {...props} products={products} numberItems={Object.keys(cartProducts).length} />} />
-      <Route path="/farmerOverview" render={(props) => <FarmerOverview {...props} farmers={farmers} numberItems={Object.keys(cartProducts).length} />} />
-      <Route path="/marketOverview" render={(props) => <MarketOverview {...props} markets={markets} numberItems={Object.keys(cartProducts).length} />} />
-      <Route path="/marketOverviewMap" render={(props) => <MarketOverviewMap {...props} markets={markets} numberItems={Object.keys(cartProducts).length} />} />
-    </Switch>
+    <ThemeProvider theme={theme}>
+      <Switch>
+        <Route exact path="/" render={(props) => <MainPage {...props} farmers={farmers} products={products} numberItems={Object.keys(cartProducts).length} />} />
+        <Route path="/farmerId" render={(props) => <FarmerProfile {...props} farmer={farmers[0]} products={products} />} />
+        <Route path="/marketId" render={(props) => <MarketProfile {...props} market={markets[0]} farmers={farmers} products={products} />} />
+        <Route path="/cartDialog" render={(props) => <CartDialog {...props} products={cartProducts} numberItems={Object.keys(cartProducts).length} setCartProducts={setCartProducts} />} />
+        {/* here we have to fetch a product from the api based on its id (props.match.params.productId) */}
+        <Route path="/productInfo/:productId" render={(props) => <ProductInfo {...props} product={products[props.match.params.productId-1]} numberItems={Object.keys(cartProducts).length} setCartProducts={setCartProducts} />} />
+        <Route path="/productShop" render={(props) => <ProductShop {...props} products={products} numberItems={Object.keys(cartProducts).length} />} />
+        <Route path="/farmerOverview" render={(props) => <FarmerOverview {...props} farmers={farmers} numberItems={Object.keys(cartProducts).length} />} />
+        <Route path="/marketOverview" render={(props) => <MarketOverview {...props} markets={markets} numberItems={Object.keys(cartProducts).length} />} />
+        <Route path="/marketOverviewMap" render={(props) => <MarketOverviewMap {...props} markets={markets} numberItems={Object.keys(cartProducts).length} />} />
+      </Switch>
+    </ThemeProvider>
   );
 }
 

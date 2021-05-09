@@ -1,12 +1,11 @@
 import React from 'react';
 import Filter from './Filter';
-import ToggleSwitch from '../Buttons/ToggleSwitch';
 import Slider from '../Buttons/Slider';
 import WeekdayBtn from '../Filters/WeekdayBtn';
 import SearchBar from '../Search/SearchBar';
-import LocationFilter from '../Filters/LocationFilter';
 import MoreFiltersBtn from '../Buttons/MoreFiltersBtn';
 import StandardFilter from '../Filters/StandardFilter';
+import { Switch } from '@material-ui/core';
 
 const Filters = ({filterVisible, setFilterVisible}) => {
 
@@ -20,9 +19,9 @@ const Filters = ({filterVisible, setFilterVisible}) => {
                 < Filter name="Sonstiges" image={require('../../css/images/assorted-assortment-blur-277276.jpg')} />
             </div>
             <div className={(filterVisible)?"productShop-inVisibleFilters":"hide"}>
-                < StandardFilter placeholderText = "Alle Erzeuger"/>
-                < LocationFilter />
-                < StandardFilter placeholderText = "Alle Märkte"/>
+                < StandardFilter placeholderText = "Alle Erzeuger" color="var(--DarkBlue)" background="var(--LightGreen)" width="80vw"/>
+                < StandardFilter placeholderText = "Alle Orte" color="var(--DarkBlue)" background="var(--LightGreen)" width="80vw"/>
+                < StandardFilter placeholderText = "Alle Märkte" color="var(--DarkBlue)" background="var(--LightGreen)" width="80vw"/>
                 
                 <Slider min="1" max="50" value1={12} value2={30} unit="€" title="Preis"></Slider>
                 <Slider min="1" max="100" value1={10} value2={20} unit="kg" title="Menge"></Slider>
@@ -38,7 +37,10 @@ const Filters = ({filterVisible, setFilterVisible}) => {
                 </div>
                 <div className="productShop-toggleSwitch">
                     <p className="productShop-toggleSwitchText">Nur verfügbare Produkte anzeigen</p>
-                    <ToggleSwitch id="name" defaultClicked={false} ></ToggleSwitch>
+                    <Switch
+                        checked={false}
+                        //onChange={handleChange}
+                    />
                 </div>
             </div>
             < MoreFiltersBtn filterVisible={filterVisible} setFilterVisible={setFilterVisible} />

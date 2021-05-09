@@ -3,9 +3,9 @@ import React from 'react';
 import Slider from '../Buttons/Slider';
 import WeekdayBtn from '../Filters/WeekdayBtn';
 import SearchBar from '../Search/SearchBar';
-import LocationFilter from '../Filters/LocationFilter';
 import MoreFiltersBtn from '../Buttons/MoreFiltersBtn';
 import StandardFilter from '../Filters/StandardFilter';
+
 
 const Filters = ({filterVisible, setFilterVisible}) => {
 
@@ -13,10 +13,10 @@ const Filters = ({filterVisible, setFilterVisible}) => {
         <section className="farmerOverview-filters">
             <SearchBar text="Erzeuger suchen" />
             <div className="farmerOverview-visibleFilters">
-                < LocationFilter />
+                < StandardFilter type="location" placeholderText="Alle Orte" color="var(--DarkBlue)" background="var(--LightGreen)" width="80vw" />
             </div>
             <div className={(filterVisible)?"farmerOverview-inVisibleFilters":"hide"}>
-                <StandardFilter placeholderText = "Alle Märkte" />
+                <StandardFilter placeholderText = "Alle Märkte" color="var(--DarkBlue)" background="var(--LightGreen)" width="80vw" />
 
                 <Slider min="1" max="50" value1={12} value2={30} unit="€" title="Preis"></Slider>
                 <Slider min="1" max="100" value1={10} value2={20} unit="kg" title="Menge"></Slider>
