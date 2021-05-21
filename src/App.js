@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core/styles';
 
 //import axios from 'axios';
@@ -32,28 +32,80 @@ const App = () => {
 
   //localStorage.clear()
 
-  const theme = createMuiTheme({
+  const theme = responsiveFontSizes(createMuiTheme({
     palette: {
       primary: { //blue
         light: 'rgb(80, 133, 139)',
-        main: 'rgb(80, 133, 139)',
+        main: 'hsl(192, 45%, 23%)',
         dark: 'hsl(192, 45%, 23%)',
-        //contrastText: 'hsl(192, 45%, 23%)',
+        contrastText: 'rgb(232, 242, 233)',
       },
       secondary: { //green
         light: 'rgb(232, 242, 233)',
         main: 'rgb(232, 242, 233)',
         dark: 'hsl(120, 23%, 79%)',
-        //contrastText: 'rgb(232, 242, 233)',
+        contrastText: 'hsl(192, 45%, 23%)',
       },
+      
       error: {
         light: "#F2E8E8",
         main: "#C67F7F",
         dark: "#C67F7F",
         //contrastText: "#C67F7F",
       },
+      text: {
+        primary: 'hsl(192, 45%, 23%)',
+        secondary: 'rgb(232, 242, 233)',
+
+      },
     },
-  });
+    typography: {
+      button: {
+        textTransform: 'none'
+      },
+      body2: {
+        fontSize: "0.8rem"
+      },
+      fontFamily: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+    },
+    overrides: {
+      MuiButton: {
+        contained: {
+          borderRadius: 'var(--imgRoundCorner)',
+          paddingLeft: "2.6rem",
+          paddingRight: "2.6rem",
+          boxShadow: "none",
+          '&:hover': {
+            boxShadow: "none"
+        },
+        },
+        containedSizeLarge: {
+          minWidth: "4.5rem",
+          borderRadius: "var(--mainRoundCorner)",
+          fontWeight: "bold",
+          fontSize: "1rem",
+          paddingTop: "1.6rem",
+          paddingBottom: "1.6rem",
+          lineHeight: "1rem",
+          '&:hover': {
+            backgroundColor: 'var(--DarkBlue)',
+            color: 'var(--LightGreen)'
+        },
+        }
+      }
+    }
+  }));
 
   const [cartProducts, setCartProducts] = useStateWithLocalStorage('myStorage', {});
 

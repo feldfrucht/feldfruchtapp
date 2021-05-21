@@ -78,9 +78,6 @@
     flex-direction: column;
     justify-content: space-around;
 }
-.cartDialog-checkOutBtn{
-    margin: 0 auto;
-}
 .cartDialog-arrowBack{
     width: 100%;
     max-width: 1170px;

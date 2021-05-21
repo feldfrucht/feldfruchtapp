@@ -5,7 +5,9 @@
   padding-right: 0.3rem;
   font-size: 1.5rem;
   color: var(--DarkGreen);
+  cursor: pointer;
 }
 .heartBtn--activated{
   color: var(--DarkBlue);
+  cursor: pointer;
 }

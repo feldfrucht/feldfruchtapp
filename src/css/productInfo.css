@@ -114,8 +114,6 @@
 .productAbout-buyBtn{
     place-self: center;
     grid-area: buyButton;
-    padding-right: 4rem;
-    padding-left: 4rem;
 }
 .productAbout-saveBtn{
     place-self: center;

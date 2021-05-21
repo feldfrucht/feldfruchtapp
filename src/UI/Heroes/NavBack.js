@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
 // get our fontawesome imports
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Cart from '../Buttons/CartIcon';
 import LogoAndDots from '../Buttons/LogoAndDots';
 import SideBar from '../NavBarMain/SideBar';
+import ArrowBack from '../Buttons/ArrowBack';
 
 const NavBack = ({ classNameHero, numberItems }) => {
 
@@ -42,9 +40,7 @@ const NavBack = ({ classNameHero, numberItems }) => {
                 <div className="navbarBack-heroCenter">
                     < LogoAndDots action={openSideBarModal}/>
                     <span className="navbarBack-heroArrowIcon">
-                        <Link to="/"> 
-                            <FontAwesomeIcon icon={faArrowLeft} />
-                        </Link>
+                      <ArrowBack/>
                     </span>
                     < Cart classNameContainer="navbarBack-heroRight" numberItems={numberItems} />
                 </div>

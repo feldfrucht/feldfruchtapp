@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from '../MainGrid/Product';
+import Button from '@material-ui/core/Button';
 
 const Products = ({ products }) => (
     <div className="productsFarmer">
@@ -10,7 +11,9 @@ const Products = ({ products }) => (
                 </div>
             </div>
         </div>
-        <button className="productsFarmer-viewProducts">Alle Produkte ansehen</button>
+        <Button variant="contained" color="primary">
+            Alle Produkte ansehen
+        </Button> 
     </div>    
 );
 

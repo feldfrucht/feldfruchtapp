@@ -1,17 +1,31 @@
 import React, { useCallback } from 'react';
-import { Link } from 'react-router-dom'
 
 // get our fontawesome imports
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import NavBar from '../NavBarMain/NavBar';
 import Product from './Product';
 import '../../css/cartDialog.css';
 import SwipeableList from '../Lists/SwipeableList';
 import SwipeableListItem from '../Lists/SwipeableListItem';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles({
+  checkOutButton: {
+    margin: "0 auto",
+    background: "var(--LightBlue)"
+  },
+  buttonText: {
+    marginRight: "1rem"
+  }
+})
 
 const CartDialog = ({ products, numberItems, setCartProducts }) => {
+
+  const classes = useStyles();
+  const theme = useTheme();
 
   let initialValue = 0;
   let totalAmount = Object.values(products).reduce((total, product)=>(total + (Number(product.price)*Number(product.amount))), initialValue);
@@ -43,12 +57,17 @@ const CartDialog = ({ products, numberItems, setCartProducts }) => {
           </ul> */}
           <p className="cart-totalAmount">Gesamt: <strong className="cart-totalAmountNumber">{totalAmount + "€"}</strong></p>
           <div className="cartDialog-bottom">
-            <button className="cartDialog-checkOutBtn">zur Kasse</button>
+            <Button variant="contained" color="primary" className={classes.checkOutButton}>
+              zur Kasse
+            </Button> 
             <span className="cartDialog-arrowBack">
-              <p  className="cartDialog-arrowBackText">Weiter schauen</p>
+            <Button variant="text" color={theme.palette.primary.light} className={classes.button} href={"/"}>
+              <p className={classes.buttonText}> Weiter schauen</p> <FontAwesomeIcon icon={faArrowLeft} />
+            </Button> 
+              {/* <p  className="cartDialog-arrowBackText">Weiter schauen</p>
               <Link to="/"> 
                   <FontAwesomeIcon icon={faArrowLeft} />
-              </Link>
+              </Link> */}
             </span>
           </div>
         </div>

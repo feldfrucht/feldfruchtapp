@@ -1,6 +1,7 @@
 import React from 'react';
 import HeartBtn from '../../HeartBtn';
 import {handleCartUpdate} from '../../Utils/Cart/handleCartUpdate';
+import Button from '@material-ui/core/Button';
 
 
 const ProductDescription = ({ product, setCartProducts }) => {
@@ -46,8 +47,12 @@ const ProductDescription = ({ product, setCartProducts }) => {
                     <input type="number" placeholder="gewünschte Menge" name="selectedAmount" onChange={handleInput}></input>
                     {amountUnit}
                 </label> 
-                <button className="productAbout-buyBtn" type="submit" onClick={()=>buy(product, selectedAmount)} >zum Warenkorb hinzufügen</button>
-                <button className="productAbout-saveBtn" type="submit">zur Einkaufsliste hinzufügen</button>    
+                <Button className="productAbout-buyBtn" variant="contained" color="primary" onClick={()=>buy(product, selectedAmount)}>
+                    zum Warenkorb hinzufügen
+                </Button>  
+                <Button variant="contained" color="primary" className="productAbout-saveBtn">
+                    zur Einkaufsliste hinzufügen
+                </Button> 
             </div>
         </section>
     );

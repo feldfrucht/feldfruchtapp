@@ -103,7 +103,6 @@ input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 }
 /* --------------- Image Container ---------------- */
 .farmerOverview-imgContainer,
-.farmer-imgContainer,
 .product-imgContainer,
 .productFarmer-imgContainer,
 .teamMember-imgContainer{
@@ -114,8 +113,7 @@ input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   cursor: pointer;
   z-index: 1;
 }
-.farmerOverview-imgContainer,
-.farmer-imgContainer{
+.farmerOverview-imgContainer{
   border-radius: var(--imgRoundCorner);
   background-position: center;
   background-size: cover;
@@ -143,8 +141,7 @@ input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 /* --------------- End of Market Text Elements ---------------- */
 /* --------------- Farmer and Product Carts ---------------- */
 .marketOverview-cart,
-.farmerOverview-cart,
-.farmer-cart {
+.farmerOverview-cart{
   background: var(--LightBlue);
   padding-top: 0.6rem;
   border-radius: var(--imgRoundCorner);
@@ -181,8 +178,7 @@ input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   z-index: 1;
   border-radius: 0 var(--imgRoundCorner) 0 var(--imgRoundCorner);
 }
-.farmerOverview-descript,
-.farmer-descript{
+.farmerOverview-descript{
   padding-top: 3.2rem;
   background: var(--LightGreen);
   border-radius: var(--imgRoundCorner);
@@ -383,11 +379,7 @@ input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 }*/
 
 /* Clickable Button styling */
-.viewAllBtn,
-.productsFarmer-viewProducts,
-.productAbout-buyBtn,
-.productAbout-saveBtn,
-.cartDialog-checkOutBtn{
+.viewAllBtn{
   border: none;
   color: var(--LightGreen);
   font-weight: bold;
@@ -587,117 +579,6 @@ input[type="search"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   font-weight: bold;
 }
 /* --------------- End of Navbar ---------------- */
-/* --------------- Searchbox ---------------- 
-.searchbar-searchAndDrop{
-  width: 100%;
-  justify-content: center;
-}
-.searchbar-container,
-.searchbarMain-container{
-  justify-self: end;
-  width: 65vw;
-  min-width: 150px;
-  height: 1.8em;
-  background: var(--LightGreen);
-  border-radius: var(--mainRoundCorner);
-  display: flex;
-}
-.searchbar-container{
-  margin: 0 auto;
-}
-.searchbar-container input[type="search"],
-.searchbarMain-container input[type="search"]{
-  background: var(--LightGreen);
-  border-radius: var(--mainRoundCorner);
-  border: none;
-  width: -webkit-calc(100% - 36px);
-  width:    -moz-calc(100% - 36px);
-  width:         calc(100% - 36px);
-  text-align: right;
-  font-size: 0.8rem;
-  margin-right: 10px;
-}
-.searchbar-icon,
-.searchbarMain-icon{
-  height: 16px;
-  width: 16px;
-  margin: auto 15px auto 0;
-  color: var(--DarkBlue);
-  cursor: pointer;
-}*/
-/* dropdown menu 
-.searchbar-searchAndDrop{
-  position: relative;
-}*/
-/* .searchbar-dropdownContent{
-  width: 100%;
-  background-color: var(--LightGreen);
-  border-radius: 0 0 var(--imgRoundCorner) var(--imgRoundCorner);
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 2;
-  position: absolute;
-  top: 40px;
-  left: 0;
-}
-.searchbar-suggestions{
-  background-color: var(--mainWhite);
-  margin: 0.7rem;
-  border-radius: var(--imgRoundCorner);
-}
-.searchbar-iconAndText{
-  border-top: 1.5px solid var(--LightGreen);
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
-  display: block;
-  color: var(--DarkBlue);
-  padding: 0.35rem 0;
-}
-.searchbar-dropdownTextTop,
-.searchbar-dropdownTextBottom{
-  margin-left: 0.5rem;
-  text-decoration: none;
-  font-size: 0.7rem;
-  cursor: pointer;
-}
-.searchbar-dropdownTextTop{
-  border-top: 1.5px solid var(--LightGreen);
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
-  display: block;
-  color: var(--DarkBlue);
-  padding: 0.5rem 0;
-} */
-/* end of dropdown menu */
-
-input[type="search"]::-webkit-input-placeholder{
-  color: var(--DarkBlue);
-  opacity: 0.5;
-}
-.standardFilter-input::-webkit-input-placeholder,
-.standardFilter-input::-moz-placeholder,
-.productShop-farmerFilter::-webkit-input-placeholder,
-.productShop-marketFilter::-webkit-input-placeholder,
-.farmerOverview-marketFilter::-webkit-input-placeholder,
-.marketOverview-marketFilter::-webkit-input-placeholder,
-.locationFilter-input::-webkit-input-placeholder,
-.productShop-farmerFilter::-moz-placeholder,
-.productShop-marketFilter::-moz-placeholder,
-.farmerOverview-marketFilter::-moz-placeholder,
-.marketOverview-marketFilter::-moz-placeholder,
-.locationFilter-input::-moz-placeholder {
-  color: var(--DarkBlue);
-  opacity: 1;
-}
-.standardFilter-lightText::-webkit-input-placeholder,
-.standardFilter-lightText::-moz-placeholder,
-.locationFilter-lightText::-webkit-input-placeholder,
-.locationFilter-lightText::-moz-placeholder,
-.marketOverviewMap-marketFilter::-webkit-input-placeholder,
-.marketOverviewMap-marketFilter::-moz-placeholder{
-  color: var(--LightGreen);
-  opacity: 1;
-}
-/* --------------- End of Searchbox ---------------- */
 /* --------------- Filters ---------------- */
 .marketOverview-filters,
 .farmerOverview-filters,
